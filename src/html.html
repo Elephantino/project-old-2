@@ -826,9 +826,9 @@
       </code>
     </pre>
 
-                <img src="img/mapSircle.avif" alt="">
-                <img src="img/mapRect.avif" alt="">
-                <img src="img/mapPoly.avif" alt="">
+                <img src="img/mapSircle.webp" alt="">
+                <img src="img/mapRect.webp" alt="">
+                <img src="img/mapPoly.webp" alt="">
 
               </details>
 
@@ -986,40 +986,21 @@
 
 
           <section class="html__table">
-            <details class="show-block table">
+            <details class="show-block table" open>
               <summary><code>table</code></summary>
-              <img src="img/table-1.avif" alt="">
+              <img src="img/table-1.webp" alt="">
 
-              <p>Аналог группировки верхних рядов в CSS — свойство display: table-header-group. Отметим, что
-                блок,
-                которому
-                задано это
-                свойство, всегда отображается вверху CSS-таблицы, даже если в разметке он идёт не первым. Это
+              <p> <code>thead === display: table-header-group;</code>   блок которому задано это свойство, всегда отображается вверху CSS-таблицы, даже если в разметке он идёт не первым. Это
                 поведение
                 идентично тегу
-                &lt;thead&gt;.</p>
+                .</p>
 
 
-              <p>display: table-footer-group, всегда отображается снизу CSS-таблицы, даже если в разметке он
+              <p><code>tfoot === display: table-footer-group;</code>  всегда отображается снизу CSS-таблицы, даже если в разметке он
                 идёт не
-                последним. Это
-                поведение идентично тегу &lt;tfoot&gt;.</p>
-
-
-              <p>Ряды содержания таблицы в HTML включаются в тег &lt;tbody&gt;. В CSS же эту задачу выполняет
-                свойство
-                display:
-                table-row-group.</p>
-
-
-              <p>В HTML-таблицах для стилизации столбцов используется тег &lt;col&gt;. Тег пишется в начале
-                таблицы и
-                не
-                закрывается. Первый &l;col&gt; в разметке влияет на каждую первую ячейку в рядах таблицы, то
-                есть, на
-                первый
-                столбец. Следующий
-                &lt;col&gt; будет стилизовать второй столбец и так далее.</p>
+                последним.</p>
+ 
+              <p>CSS-таблицы пустой div и с свойством <code>display: table-column; === </code> &lt;col&gt; HTML-лемент для стилизации столбцов. пишется в начале таблицы и не закрывается. Первый &l;col&gt; в разметке влияет на каждую первую ячейку в рядах таблицы, то есть, на первый столбец. Следующий &lt;col&gt; будет стилизовать второй столбец и так далее.</p>
               <pre>
       <code>
     &lt;table&gt;
@@ -1037,19 +1018,11 @@
       </code>
     </pre>
 
-              <p>В CSS-таблицах всё так же: внутри таблицы нужно создать пустой тег и задать ему свойство
-                display:
-                table-column —
-                это
-                аналог тега &lt;col&gt;. Правила для него будут применяться к первому столбцу, следующий
-                элемент с
-                table-column
-                стилизует второй столбец и так далее.</p>
 
 
-              <details class="show-piece display-table">
-                <summary><code>display: table;</code></summary>
-                <pre>
+
+
+              <pre>
       <code>
     table { display: table }
     
@@ -1072,87 +1045,57 @@
             { caption-side: bottom }
       </code>
     </pre>
-              </details>
+
 
               <details class="show-piece">
                 <summary><code>Стек таблиц</code></summary>
-                <img src="img/table-2.avif" alt="">
+                <img src="img/table-2.webp" alt="">
               </details>
 
-              <details class="show-piece">
-                <summary><code>Отображение и скрытие пустых ячеек таблицы</code></summary>
-                <p>Свойство empty-cellsCSS определяет, будут ли отображаться границы и фон вокруг
-                  &lt;table&gt;ячеек, не имеющих видимого содержимого.</p>
-                <pre>
-      <code>
-        empty-cells: show;
-    
-        empty-cells: hide;
-      </code>
-    </pre>
-              </details>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li><code>caption - </code> размещается внутри таблицы первым, до остальных вложенных тегов.
+                        </li>
+                        <li><code>caption-side: top / bottom</code></li>
+                        <li><code>text-align</code></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>colspan - </code> объединения ячеек по горизонтали
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>rowspan -- </code>объединения ячеек по вертикали
+                    </td>
+                  </tr>
 
-              <details class="show-piece caption">
-                <summary><code>caption</code></summary>
-                <p>Тег &lt;caption&gt; должен размещаться внутри тега &lt;table&gt;, причём непосредственно
-                  внутри него
-                  и
-                  первым, до остальных вложенных тегов.</p>
-                <p>По вертикали заголовок таблицы перемещается CSS-свойством caption-side со значениями top и
-                  bottom</p>
-                <p>По горизонтали заголовок таблицы выравнивается свойством text-align со значениями left, right
-                  и
-                  center
-                </p>
-              </details>
+                  <tr>
+                    <td>
+                      <code>empty-cells: show / hide; - </code>
+                      будут ли отображаться границы и фон вокруг ячеек, не имеющих видимого содержимого
+                    </td>
+                  </tr>
 
-              <details class="show-piece ">
-                <summary><code>colspan</code></summary>
-                <p>объединения ячеек по горизонтали</p>
-                <p>Когда вы задаёте ячейке атрибут colspan со значением 2, то ячейка как бы «растягивается» на
-                  ячейку
-                  справа, но та ячейка
-                  не исчезает, а отодвигается и в таблице появляется новый столбец. Чтобы удалить его, нужно
-                  удалить
-                  ячейку,
-                  которая
-                  находится справа от «растянутой».</p>
-              </details>
+                  <tr>
+                    <td>
+                      <code>display: table-row - </code>Строка таблицы. Она является контейнером для ячеек и практически
+                      не имеет
+                      собственного отображения. Для неё можно только задавать цвет фона.
+                    </td>
+                  </tr>
 
-              <details class="show-piece rowspan">
-                <summary><code>rowspann</code></summary>
-                <p>объединения ячеек по вертикали</p>
-                <p>Когда вы задаёте ячейке атрибут rowspan со значением 2, то ячейка как бы «растягивается» на
-                  следующую
-                  строку. При этом
-                  ячейка, которая была под «растянутой» отодвигается в своей же строке вправо, что добавляет в
-                  таблицу
-                  лишний столбец.
-                  Удалив ячейку, которая была под «растянутой», мы избавимся от этого столбца.</p>
-              </details>
+                </tbody>
+              </table>
 
-              <details class="show-piece display-table">
-                <summary><code>display: table;</code></summary>
-                <p>задаёт боксу элемента тип таблица</p>
-                <ul>
-                  <li>можно задавать ширину, высоту, рамки, отступы;</li>
-                  <li>по умолчанию ширина зависит от содержания;</li>
-                  <li>переносы строки до и после элемента.</li>
-                </ul>
-                <p>Табличный тип бокса похож на блочный за исключением ширины по умолчанию.</p>
-              </details>
 
-              <details class="show-piece display-table-row">
-                <summary><code>display: table-row</code></summary>
-                <p>Строка таблицы — необычный элемент. Она является контейнером для ячеек и практически не имеет
-                  собственного отображения. Для неё можно только задавать цвет фона.</p>
-              </details>
 
-              <details class="show-piece display-table-cell">
-                <summary><code>display: table-cell</code></summary>
-                <p>ячейка таблицы</p>
 
-              </details>
 
               <details class="show-piece table-layout">
                 <summary><code>table-layout</code></summary>
@@ -1432,90 +1375,7 @@
                   ширину.</p>
               </details>
 
-
-              <p>Отступы внутри ячеек можно добавлять с помощью атрибута cellpadding, но лучше его не
-                использовать, а
-                задавать отступы с помощью CSS.</p>
-
-              <p>Отступы между ячейками не работают с border-collapse: collapse, что достаточно логично, ведь
-                рамки
-                ячеек в
-                этом режиме «склеены» и их не разорвать.</p>
-
-              <p>border-collapse: separate, которое «расклеивает» ячейки</p>
-
-              <p>Отступы между ячейками можно задать:</p>
-              <ul>
-                <li>cellspacing атрибут</li>
-                <li>border-spacing свойство</li>
-              </ul>
-
-              <pre>
-      <code>
-    th    table header    ячейка-заголовок.
-    
-    th аналогичен td, он так же должен располагаться внутри tr, для него стилями можно задавать все те же свойства.
-      </code> 
-    </pre>
-
-              <p>Для группировки нескольких рядов с ячейками-заголовками можно использовать тег &lt;thead&gt;.
-              </p>
-              <p>Аналогично для группировки основных рядов используют тег &lt;tbody&gt;, а для «подвала»
-                таблицы — тег
-                &lt;tfoot&gt;.</p>
-
-              <pre>
-      <code>
-    &lt;table&gt;
-      &lt;caption&gt;&lt;/caption&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Заголовок&lt;/th&gt;
-          &lt;th&gt;Заголовок&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Текст&lt;/td&gt;
-          &lt;td&gt;Текст&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-      &lt;tfoot&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Текст&lt;/td&gt;
-          &lt;td&gt;Текст&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tfoot&gt;
-    &lt;/table&gt;
-      </code>
-    </pre>
-
-
-              <details class="show-piece ">
-                <summary><code></code></summary>
-
-              </details>
-
-
-
-              <details class="show-piece ">
-                <summary><code></code></summary>
-
-              </details>
-
-
-
-              <details class="show-piece ">
-                <summary><code></code></summary>
-
-              </details>
-
-
-
-              <details class="show-piece ">
-                <summary><code></code></summary>
-
-              </details>
+              
 
 
 
