@@ -22,3 +22,12 @@ export function isWebp() {
    // });
    
 }
+
+
+export function gridAnimations(el) {
+  el.addEventListener("click", () => {
+    el.classList.toggle("gridAnimationAuto")
+  })
+}
+
+

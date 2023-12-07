@@ -776,12 +776,7 @@ summary::-webkit-details-marker {
 
 
 
-  .adaptive-grid__button,
-  .adaptive-flex__button {
-    border: 1px solid #000;
-    padding: 3px;
-    border-radius: 5px;
-  }
+  
 
   .auto-fill {
     margin-bottom: 1em;
@@ -791,11 +786,14 @@ summary::-webkit-details-marker {
     grid-auto-rows: 3em;
     border: 1px solid coral;
     padding: .3em;
+
+    cursor: pointer;
   }
 
   .auto-fill__item,
-  .auto-fit__item {
-    background-color: rgba(169, 47, 47, 0.658);
+  .auto-fit__item,
+  .adaptive-flex__item {
+    border: 1px solid black;
   }
 
   .auto-fit {
@@ -806,6 +804,8 @@ summary::-webkit-details-marker {
     border: 1px solid coral;
     padding: .3em;
     margin-bottom: 3em;
+
+    cursor: pointer;
   }
 
   .adaptive-flex {
@@ -814,10 +814,11 @@ summary::-webkit-details-marker {
     border: 1px solid coral;
     padding: .3em;
     gap: .7em;
+
+    cursor: pointer;
   }
 
   .adaptive-flex__item {
-    background-color: rgba(169, 47, 47, 0.658);
     height: 3em;
     flex: 1 1 3em;
   }

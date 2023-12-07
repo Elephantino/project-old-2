@@ -13,12 +13,22 @@ const swiper = new Swiper();
 
 
 
+// grid 
 
 
+let autoFill = document.querySelector('.auto-fill');
+let autoFit = document.querySelector('.auto-fit');
+let autoFlex = document.querySelector('.adaptive-flex');
 
+if (autoFill) {
+  flsFunctions.gridAnimations(autoFill);
+}
 
+if (autoFit) {
+  flsFunctions.gridAnimations(autoFit);
+}
 
-
-
-
+if (autoFlex) {
+  flsFunctions.gridAnimations(autoFlex);
+}
 
