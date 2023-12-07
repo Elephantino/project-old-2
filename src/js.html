@@ -680,6 +680,26 @@ console.log(str.at(-1)); // t
     </code>
 </pre>
 
+              <div class="block">
+                <h2>перебор строки</h2>
+                <pre>
+    <code>
+let str = "Hello";
+
+for(let i of str) {
+    console.log(i);
+}
+  //
+    H
+    e
+    l
+    l
+    o
+     //
+    </code>
+</pre>
+              </div>
+
               <div class="performance">
                 <h2>Методы String</h2>
 
@@ -837,6 +857,12 @@ alert( "Midget".includes("id", 3) ); // false, поиск начат с пози
               <p>объект класса Function</p>
               <p>Функция – особого типа значение переменной</p>
 
+              <ul>
+                <li>функция возвращает только один результат своей работы</li>
+                <li>после <code>return</code> код не выполняется, происходит выход из функции</li>
+                <li>если в функции нет <code>return</code> то она вернет <code>indefined</code></li>
+              </ul>
+
               <div class="performance">
                 <h3 class="performance__title">Function Declaration - объявление функции</h3>
 
@@ -984,6 +1010,23 @@ console.log(arr[7]); // undefined
    </code>
 </pre>
 
+              <h2>меняем элементы массива местами</h2>
+              <pre>
+    <code>
+let a = [4, 1, 2, 3];
+let swap = a[0];
+
+a[1] = swap; // [1, 4, 2, 3]
+    </code>
+</pre>
+              <p>если сразу записать на первое место значение второго элемента, то мы потеряем значение первого.</p>
+
+
+              <div>
+                <p>matches() //проверка</p>
+                <p>closet() //возвращает</p>
+                <p>contains() //проверка</p>
+              </div>
 
               <details class="show-piece array-clone">
                 <summary>Клонирование массива</summary>
@@ -1057,6 +1100,9 @@ a[0][1]; // 15
               <div class="performance">
 
                 <h2>Методы массивов</h2>
+
+                <h2>replace</h2>
+                <p>из числа с запятыми 3,45,666 можем получить 345666 использовав <code>.replace(/,/g " ")</code></p>
 
                 <details class="show-piece reverse">
                   <summary>Array.indexOf</summary>
@@ -1716,7 +1762,8 @@ alert( 1 && 2 && 3 ); // 3
             <h2>События</h2>
 
             <a href="https://www.youtube.com/watch?v=bWCzbR5DvCo&t=908s" target="_blank"
-              rel="noopener noreferrer">источник источник
+              rel="noopener noreferrer">источник
+              источник
               источник источник источник</a>
             <p>каждое событие имеет свой объект свойств с которыми можно взаимодействовать.</p>
             <pre><code>

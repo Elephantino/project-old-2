@@ -17,6 +17,7 @@
 
           <h1>css</h1>
 
+
           <section class="fit-content">
             <h4><code>margin: 0 auto; </code>у всех элементов</h4>
             <div class="fit-content__inner">
@@ -308,8 +309,8 @@ border-image-slice: 10%;
             </details>
           </section>
 
-          <section class="box-shadow">   <!-- box-shadow -->
-            <details class="show-block"> 
+          <section class="box-shadow"> 
+            <details class="show-block">
               <summary><code>box-shadow</code></summary>
 
               <p>Тень в реальном мире редко бывает просто черной, она обычно содержит в себе оттенок основного цвета
@@ -542,6 +543,9 @@ input[type="checkbox"]:required:checked {}
   </code>
 </pre>
               </article>
+
+              <h2>has</h2>
+              <p><code>.card:not(:has(+.card)) </code>//все .card за которыми нет .card</p>
 
               <details class="show-piece enabled-disabled">
                 <summary><code>enabled / disabled</code> -- обратиться к доступным / недоступным элементам </summary>

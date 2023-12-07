@@ -33,9 +33,7 @@
 
 }
 
-.index-html__item--flex {
-  display: flex;
-}
+
 
 
 .main-menu {
@@ -776,7 +774,7 @@ summary::-webkit-details-marker {
 
 
 
-  
+
 
   .auto-fill {
     margin-bottom: 1em;
@@ -788,12 +786,6 @@ summary::-webkit-details-marker {
     padding: .3em;
 
     cursor: pointer;
-  }
-
-  .auto-fill__item,
-  .auto-fit__item,
-  .adaptive-flex__item {
-    border: 1px solid black;
   }
 
   .auto-fit {
@@ -816,6 +808,12 @@ summary::-webkit-details-marker {
     gap: .7em;
 
     cursor: pointer;
+  }
+
+  .auto-fill__item,
+  .auto-fit__item,
+  .adaptive-flex__item {
+    border: 1px solid black;
   }
 
   .adaptive-flex__item {
@@ -1125,6 +1123,10 @@ summary::-webkit-details-marker {
 
 
 /*   css    */
+
+
+
+
 
 
 .css {
