@@ -629,7 +629,7 @@ for (let i = 0; i &lt; arr.length; i++) {
           </section>
 
           <section class="structures">
-            <h2 class="title">структуры данных</h2>
+            <h2 class="title">структуры</h2>
 
 
             <details class="show-piece primitives">
@@ -914,6 +914,34 @@ const square = x =&gt; x * x;
 </pre>
               </div>
             </details>
+
+
+
+            <details class="show-piece constructor">
+              <summary>constructor</summary>
+
+              <pre>
+  <code>
+Свойство <span style="color: #cc4700;">constructor</span> ссылается на функцию-конструктор, которая была использована при создании объекта:
+            
+&lt;script&gt;
+            
+let x = new String();
+            
+if (x.constructor == String)
+  document.write("Это объект String");  
+else
+  document.write("Это не String");  
+                        
+        // выведет:  Это объект String
+            
+&lt;/script&gt;
+  </code>
+</pre>
+            </details>
+
+
+
 
             <details class="show-piece htmlCollection">
               <summary>HTMLCollection</summary>
@@ -1752,6 +1780,74 @@ alert( 1 && 2 && 3 ); // 3
               </details>
 
 
+
+            </details>
+          </section>
+
+          <section class="export-import">
+            <details class="show-block ">
+              <summary><code>export-import</code></summary>
+
+              <p><b>import</b> <em>дефолтные через запятую</em><b>,</b> { <em>именованные через запятую</em> } откуда
+                "./... .js"
+              </p>
+
+              <div class="export-import__box">
+
+                <pre><code>
+<b>Основной файл</b>
+  
+          
+import del, { sum, show, color } from "./func.js";
+        
+
+
+color(elem);
+    
+sum(4, 1);
+    
+show(elem);
+
+del(elem);
+    <hr>  
+<b>переименование</b>
+
+import del as  delete, { * as <span style="color: red;">name</span> } from "./func.js";
+import del теперь delete, { все теперь <span style="color: red;">name</span> } из "./func.js";
+
+функции стали как свойства объекта <span style="color: red;">name</span>
+но не все а только те которые мы
+объединили в объект <ins> * as name</ins>
+
+
+<span style="color: red;">name</span>.color(elem);
+  
+<span style="color: red;">name</span>.sum(4, 1);
+
+<span style="color: red;">name</span>.show(elem);
+
+delete(elem); //не свойсво объекта <span style="color: red;">name</span>
+</code></pre>
+
+                <pre><code>
+<b>Дополнительный файл</b>
+  
+  
+let sum = function (a, b) { ... }
+let show = function (elem) { ... }
+
+export let color = function() { ... }
+  
+export default function del(elem) { ... }
+  
+
+
+      
+объявленный экспорт снизу не перечисляется:  
+
+export { sum, show };
+</code></pre>
+              </div>
 
             </details>
           </section>

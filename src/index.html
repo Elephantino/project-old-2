@@ -14,121 +14,11 @@
       <siction class="index-html">
         <div class="container">
 
-          <p>атрибут title="подсказка при hover"</p>
-
-
-
-
-          <section>
-            <h3>export / import</h3>
-
-            <p><b>import</b> <em>дефолтные через запятую</em><b>,</b> { <em>именованные через запятую</em> } откуда
-              "./... .js"
-            </p>
-
-            <div class="export-import__box">
-
-              <pre><code>
-<b>Основной файл</b>
-  
-          
-import del, { sum, show, color } from "./func.js";
-        
-
-
-color(elem);
-    
-sum(4, 1);
-    
-show(elem);
-
-del(elem);
-    <hr>  
-<b>переименование</b>
-
-import del as  delete, { * as <span style="color: red;">name</span> } from "./func.js";
-import del теперь delete, { все теперь <span style="color: red;">name</span> } из "./func.js";
-
-функции стали как свойства объекта <span style="color: red;">name</span>
-но не все а только те которые мы
-объединили в объект <ins> * as name</ins>
-
-
-<span style="color: red;">name</span>.color(elem);
-  
-<span style="color: red;">name</span>.sum(4, 1);
-
-<span style="color: red;">name</span>.show(elem);
-
-delete(elem); //не свойсво объекта <span style="color: red;">name</span>
-</code></pre>
-
-              <pre><code>
-<b>Дополнительный файл</b>
-  
-  
-let sum = function (a, b) { ... }
-let show = function (elem) { ... }
-
-export let color = function() { ... }
-  
-export default function del(elem) { ... }
-  
-
-
-      
-объявленный экспорт снизу не перечисляется:  
-
-export { sum, show };
-</code></pre>
-            </div>
-
-          </section>
-
-
-
-
-
-
-
-
-
-
 
           <section>
 
-            <h3>Убираем выделение текста при нажатии</h3>
-            <pre>
-              <code>
-            form {
-              user-select: none;
-              -webkit-user-select: none;
-            }
-              </code>
-            </pre>
 
-            <article>
-              <h2>constructor</h2>
-              <pre>
-               <code>
-               Свойство <span style="color: #cc4700;">constructor</span> ссылается на функцию-конструктор, 
-               которая была использована при создании объекта:
-            
-               &lt;script&gt;
-            
-                  let x = new String();
-            
-                  if (x.constructor == String)
-                     document.write("Это объект String");  
-                  else
-                     document.write("Это не String");
-                        
-                     // выведет:  Это объект String
-            
-                  &lt;/script&gt;
-               </code>
-            </pre>
-            </article>
+
 
 
             <ul>
@@ -140,6 +30,9 @@ export { sum, show };
               <li>
                 <a href="js.html#delegate-event--menu">Меню на делегировании событий</a>
               </li>
+              <li>
+                атрибут title="подсказка при hover"
+              </li>
             </ul>
 
 
@@ -150,27 +43,7 @@ export { sum, show };
             <h2>Featured Articles</h2>
 
             <ul class="main-menu list-reset">
-              <!-- <li class="main-menu__item">
-                <a href="html.html">
-                  <h3>html</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </a>
-              </li>
-              <li class="main-menu__item">
-                <a href="css.html">
-                  <h3>css</h3>
-                </a>
-              </li>
-              <li class="main-menu__item">
-                <a href="js.html">
-                  <h3>js</h3>
-                </a>
-              </li>
-              <li class="main-menu__item">
-                <a href="svg.html">
-                  <h3>svg</h3>
-                </a>
-              </li> -->
+
               <li class="main-menu__item">
                 <a href="flex.html">
                   <h3>flex</h3>
@@ -219,7 +92,15 @@ export { sum, show };
           </section>
 
 
+          <pre>
+              <code>
+   выделение текста при нажатии
 
+form {
+  user-select: none;
+}
+              </code>
+            </pre>
 
 
           <div class="performance">
@@ -364,65 +245,9 @@ window.addEventListener('hashchange', scrollToId);
 
 
 
-          <section class="hierarchy">
-            <h2>header ierarchy</h2>
-            <div class="hierarchy__inner">
 
-              <h2 class="hierarchy__title">h2</h2>
 
-              <div class="hierarchy__h3">
-                <h3 class="hierarchy__title">h3</h3>
-                <div class="hierarchy__h4">
-                  <h4 class="hierarchy__title">h4</h4>
-                </div>
-              </div>
 
-              <hgroup>
-                <h1 class="hierarchy__title">h1
-                  <span>hgroup</span>
-                </h1>
-                <h2 class="hierarchy__title">h2</h2>
-              </hgroup>
-
-              <div class="hierarchy__h3 grid">
-                <h3 class="hierarchy__title">h3</h3>
-
-                <div class="hierarchy__h4">
-                  <h4 class="hierarchy__title">h4</h4>
-                  <div class="hierarchy__h5">
-                    <h5 class="hierarchy__title">h5</h5>
-                  </div>
-                </div>
-
-                <h3 class="hierarchy__title">h3</h3>
-
-                <div class="hierarchy__h4">
-                  <h4 class="hierarchy__title">h4</h4>
-                  <div class="hierarchy__h5">
-                    <h5 class="hierarchy__title">h5</h5>
-                  </div>
-                </div>
-
-                <h3 class="hierarchy__title">h3</h3>
-
-                <div class="hierarchy__h4">
-                  <h4 class="hierarchy__title">h4</h4>
-                  <div class="hierarchy__h5">
-                    <h5 class="hierarchy__title">h5</h5>
-                    <div class="hierarchy__h6">
-                      <h6 class="hierarchy__title">h6</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h2 class="hierarchy__title">h2</h2>
-
-            </div>
-
-          </section>
-
-          
 
           <section class="stylesForMany">
             <h2>стилизация элементов на основе их количества</h2>
