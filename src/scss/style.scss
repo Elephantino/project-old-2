@@ -26,6 +26,10 @@
   }
 }
 
+.page--main {
+  min-width: 0;
+}
+
 .page--footer {
   color: #fff;
   background-color: rgba(0, 0, 0, .4);
@@ -65,23 +69,10 @@
 
 
 
-
-
-
-
-
-
-
 .export-import__box {
   display: flex;
   justify-content: space-between;
 }
-
-
-
-
-
-
 
 
 
@@ -1151,6 +1142,9 @@ summary::-webkit-details-marker {
   }
 
 }
+
+
+
 
 
 
