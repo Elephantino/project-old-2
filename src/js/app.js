@@ -32,3 +32,12 @@ if (autoFlex) {
   flsFunctions.gridAnimations(autoFlex);
 }
 
+
+
+
+
+// media
+
+// import { findVideos } from "./modules/functions.js";
+
+flsFunctions.findVideos();
