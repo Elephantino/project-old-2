@@ -15,6 +15,62 @@
         <div class="container">
 
 
+          
+
+
+          <section class="content-switcher-example">
+
+            <section class="checkout">
+
+              <ol class="tab-list list-reset">
+                <li class="tab-item">1</li>
+                <li class="tab-item is-active">2</li>
+                <li class="tab-item">3</li>
+                <li class="tab-item">4</li>
+                <li class="tab-item">5</li>
+              </ol>
+
+              <ul class="content-list list-reset">
+                <li class="content-item">Content-1</li>
+                <li class="content-item is-active">Content-2</li>
+                <li class="content-item">Content-3</li>
+                <li class="content-item">Content-4</li>
+                <li class="content-item">Content-5</li>
+              </ul>
+
+            </section>
+            
+              <textarea name="js" cols="80" rows="12">
+const tabItems = Array.from(document.querySelectorAll('.tab-item'));
+const contentItems = Array.from(document.querySelectorAll('.content-item'));
+//  Array.from что бы работал .find
+
+const clearActiveClass = (element, className = 'is-active') => {
+  element.find(item => item.classList.remove(`${className}`))
+}
+const setActiveClass = (element, index, className = 'is-active') => {
+  element[index].classList.add(`${className}`)
+}
+
+const checkoutTabs = (item, index) => {
+  item.addEventListener('click', () => {
+
+    if (item.classList.contains('is-active')) return
+
+    clearActiveClass(tabItems)
+    clearActiveClass(contentItems)
+
+    setActiveClass(tabItems, index)
+    setActiveClass(contentItems, index)
+
+  })
+}
+
+tabItems.forEach(checkoutTabs);
+            </textarea>
+
+          </section>
+
           <article>
 
             <ul>
@@ -159,7 +215,7 @@ sddefault.jpg - стандартное
 </pre>
 
           </div>
-          
+
           <div class="performance">
             <h3>.active</h3>
             <p>можно не писать отдельный сласс .active и присваивать ему какие то отдельные значения для одного
