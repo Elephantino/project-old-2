@@ -1442,24 +1442,29 @@ Object.values(car).forEach((value) =&gt; {
               </div>
 
               <div class="performance">
-                <h3>entries</h3>
-                <p>в Object имеется также метод entries, массив массивов, в котором первый элемент будет
-                  являться
-                  именем
-                  свойства, а второй значением:</p>
-                <pre>
-  <code>
-const car = {
-  brand: 'Ford',
-  color: 'blue'
+                <h3>keys / values / entries</h3>
+<pre><code>
+const person = {
+  name: "Igor",
+  lastName: "Rybinsky",
+  age: 28,
+  city: "Bratsk"
 }
-const entries = Object.entries(car); // [['brand', 'Ford'], ['color', 'blue']]
-  entries.forEach((item) =&gt; {
-  console.log(`${item[0]}: ${item[1]}`);
-});
-  </code>
-</pre>
+
+Object.keys(obj);    // массив имен объекта
+Object.values(obj);  // массив значений объекта
+Object.entries(obj); // массив массивов [имя свойства, значение свойства]
+
+
+console.log(Object.keys(person));    // [ 'name', 'lastName', 'age', 'city' ]
+console.log(Object.values(person));  // [ 'Igor', 'Rybinsky', 28, 'Bratsk' ]
+console.log(Object.entries(person)); // [ ['name', 'Igor'], ['lastName', 'Rybinsky'], ['age', 28], ['city', 'Bratsk'] ]
+
+
+</code></pre>
               </div>
+
+              
 
               <div class="performance">
                 <h2>методы объектов</h2>
