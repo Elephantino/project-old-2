@@ -705,62 +705,6 @@ summary::-webkit-details-marker {
 
 
 
-.stylesForMany {
-
-  &__inner>img {
-    max-width: 450px;
-  }
-
-  &__show span {
-    display: inline-block;
-    width: 2em;
-    height: 1em;
-    background-color: silver;
-  }
-
-  &__show.one span:nth-last-child(2) {
-    background-color: tomato;
-  }
-
-  &__show.two span:nth-last-child(6):first-child {
-    background-color: tomato;
-  }
-
-  &__show.three span:nth-last-child(6):first-child,
-  &__show.three span:nth-last-child(6):first-child~span {
-    background-color: tomato;
-  }
-
-  &__show.four span:nth-child(n+6) {
-    background-color: tomato;
-  }
-
-  &__show.five span:nth-child(6),
-  &__show.five span:nth-child(6)~span {
-    background-color: tomato;
-  }
-
-
-  &__show.six span:nth-last-child(n+6) {
-    background-color: tomato;
-  }
-
-  &__show.seven span:nth-child(even) {
-    background-color: tomato;
-  }
-
-
-
-
-}
-
-
-
-
-
-
-
-
 
 
 
