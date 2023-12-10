@@ -3,7 +3,11 @@
 
 
 
-
+h1,
+h2,
+h3 {
+  text-align: center;
+}
 
 .page--header {
   margin-top: 0;
@@ -34,7 +38,8 @@
   color: #fff;
   background-color: rgba(0, 0, 0, .4);
   padding: 1em;
-
+  position: relative;
+  margin-top: auto;
 }
 
 
@@ -75,7 +80,10 @@
 
   &__content-list {
     display: inline-block;
-    margin-left: 150px;
+    margin-left: 170px;
+
+    width: 100%;
+    padding-right: 200px;
   }
 
 
