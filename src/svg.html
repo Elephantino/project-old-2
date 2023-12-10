@@ -17,59 +17,89 @@
 
           <h1>svg</h1>
 
-          <section class="svg">
-
-            <section class="svg__item">
-
-              <a href="http://css.yoksel.ru/svg-groups-use/" target="_blank"
-                rel="noopener noreferrer">http://css.yoksel.ru/svg-groups-use/</a>
-
-              <p>Данные, включённые в атрибут d, описывают команды для path: moveto, line, curve, arc и closepath.</p>
+          <section class="svg layout">
 
 
-              <p>Для создания контура используется элемент &lt;path&gt;.</p>
-              <p>В качестве данных контура используются следующие команды:</p>
-              <ul class="list-reset">
-                <li>M = переместить указатель</li>
-                <li>L = нарисовать линию</li>
-                <li>H = нарисовать горизонтальную линию</li>
-                <li>V = нарисовать вертикальную линию</li>
-                <li>C = нарисовать кубическую кривую Безье с двумя контрольными точками</li>
-                <li>S = нарисовать сглаженную кубическую кривую Безье с одной контрольной точкой</li>
-                <li>Q = нарисовать квадратичную кривую Безье с одной контрольной точкой</li>
-                <li>T = нарисовать сглаженную квадратичную кривую Безье. Контрольной точкой будет отражение контрольной
-                  точки предыдущей команды.</li>
-                <li>A = нарисовать эллиптическую кривую</li>
-                <li>Z = закрыть контур</li>
-              </ul>
 
-              <p><b>Примечание: Если команда записана
-                  большими буквами, то позиционирование будет абсолютным. Если маленькими буквами, то позиционирование
-                  будет относительным.</b></p>
 
-              <h4>moveto</h4>
 
-              <p>Команды moveto (М или м) устанавливают новые точки, как будто мы поднимаем ручку и начинаем рисовать в
-                новом месте на листе бумаги. Строка кода, составляющего данные path, должна начинаться с команды moveto,
-                как показано выше в примере с лаймом.</p>
-              <p>Команды moveto, которые следуют за исходной, представляют собой начало нового фрагмента контура,
-                создавая
-                составной контур. Заглавная М указывает, что после нее идут абсолютные координаты, тогда как строчная m
-                указывает на
-                относительные
-                координаты.</p>
 
-              <h4>closepath</h4>
 
-              <p>Closepath (Z и z) заканчивает текущий фрагмент контура приводит к рисованию прямой линии от текущей
-                точки
-                до начальной.</p>
-            </section>
 
-            <section class="how-to-insert">
+            <ol class="layout__tab-list list-reset">
 
-              <details class="show-piece">
-                <summary><code>Как вставить?</code></summary>
+              <li class="layout__tab-item is-active">начальная</li>
+              <li class="layout__tab-item">Как вставить?</li>
+              <li class="layout__tab-item">sprite</li>
+              <li class="layout__tab-item">&lt;![CDATA[ ...]]&gt;</li>
+              <li class="layout__tab-item">viewport и vievBox</li>
+              <li class="layout__tab-item">preserveAspectRatio</li>
+              <li class="layout__tab-item">animation</li>
+              <li class="layout__tab-item">smil animation</li>
+              <li class="layout__tab-item">mask-image</li>
+              <li class="layout__tab-item">figures</li>
+              <li class="layout__tab-item">fill-rule</li>
+              <li class="layout__tab-item">filter-drop-shadow</li>
+              <li class="layout__tab-item">медиавыражения</li>
+
+            </ol>
+
+            <ul class="layout__content-list list-reset">
+
+              <li class="layout__content-item is-active">
+
+
+                <a href="http://css.yoksel.ru/svg-groups-use/" target="_blank"
+                  rel="noopener noreferrer">http://css.yoksel.ru/svg-groups-use/</a>
+
+                <p>Данные, включённые в атрибут d, описывают команды для path: moveto, line, curve, arc и closepath.</p>
+
+
+                <p>Для создания контура используется элемент &lt;path&gt;.</p>
+                <p>В качестве данных контура используются следующие команды:</p>
+                <ul class="list-reset">
+                  <li>M = переместить указатель</li>
+                  <li>L = нарисовать линию</li>
+                  <li>H = нарисовать горизонтальную линию</li>
+                  <li>V = нарисовать вертикальную линию</li>
+                  <li>C = нарисовать кубическую кривую Безье с двумя контрольными точками</li>
+                  <li>S = нарисовать сглаженную кубическую кривую Безье с одной контрольной точкой</li>
+                  <li>Q = нарисовать квадратичную кривую Безье с одной контрольной точкой</li>
+                  <li>T = нарисовать сглаженную квадратичную кривую Безье. Контрольной точкой будет отражение
+                    контрольной
+                    точки предыдущей команды.</li>
+                  <li>A = нарисовать эллиптическую кривую</li>
+                  <li>Z = закрыть контур</li>
+                </ul>
+
+                <p><b>Примечание: Если команда записана
+                    большими буквами, то позиционирование будет абсолютным. Если маленькими буквами, то позиционирование
+                    будет относительным.</b></p>
+
+                <h4>moveto</h4>
+
+                <p>Команды moveto (М или м) устанавливают новые точки, как будто мы поднимаем ручку и начинаем рисовать
+                  в
+                  новом месте на листе бумаги. Строка кода, составляющего данные path, должна начинаться с команды
+                  moveto,
+                  как показано выше в примере с лаймом.</p>
+                <p>Команды moveto, которые следуют за исходной, представляют собой начало нового фрагмента контура,
+                  создавая
+                  составной контур. Заглавная М указывает, что после нее идут абсолютные координаты, тогда как строчная
+                  m
+                  указывает на
+                  относительные
+                  координаты.</p>
+
+                <h4>closepath</h4>
+
+                <p>Closepath (Z и z) заканчивает текущий фрагмент контура приводит к рисованию прямой линии от текущей
+                  точки
+                  до начальной.</p>
+
+              </li>
+              <li class="layout__content-item">
+                <h2>Как вставить?</h2>
 
                 <p>Если хочется выжать максимум из SVG, используйте object. В качестве альтернативы подходит встроенный
                   SVG,
@@ -162,129 +192,125 @@
   </code>
 </pre>
                 </details>
+              </li>
+              <li class="layout__content-item">
 
-              </details>
+                <h2>sprite</h2>
+                <p>Проблема инлайнового svg в том что браузер не может его кэшировать. Если имеется
+                  большой спрайт то намного выгодней его кэшировать(поместить файл.svg не вставлять код в html а в
+                  картинки
+                  и
+                  вытаскивать от туда).</p>
 
-            </section>
+                <details class="show-piece">
+                  <summary><code>спрайт в html</code></summary>
 
-            <section class="svg-inline">
-              <h2>sprite</h2>
-              <p>Проблема инлайнового svg в том что браузер не может его кэшировать. Если имеется
-                большой спрайт то намного выгодней его кэшировать(поместить файл.svg не вставлять код в html а в
-                картинки
-                и
-                вытаскивать от туда).</p>
+                  <pre>
+                  <code>
+                Вставляем спрайт на странице html и скрываем элемент svg потому 
+                что, svg по дефолту занимает место 150x300
+                
+                                                        прячем спрайт
+                &lt;svg xmlns="http://www.w3.org/2000/svg" <span style="color: tomato;">display="none"</span>&gt;
+                
+                  &lt;defs&gt;  блок defs и symbol не отображаются
+                
+                    &lt;symbol viewBox="0 0 21 22" id="src-1"&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                    &lt;/symbol&gt;
+                
+                    &lt;symbol viewBox="0 0 21 18" id="<span style="color: tomato;">src-2</span>"&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                    &lt;/symbol&gt;
+                
+                    &lt;symbol viewBox="0 0 21 22" id="src-3"&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                    &lt;/symbol&gt;
+                
+                  &lt;/defs&gt;
+                
+                &lt;/svg&gt;
+                
+                В нутри спрайта расположены картинки в тегах symbol, у
+                каждой свой id для обращения к конкретной отдельно.
+                
+                &lt;svg&gt;
+                  &lt;use xlink:href="#<span style="color: tomato;">svg-2</span>"&gt;&lt;/use&gt;
+                &lt;/svg&gt;
+                  </code>
+                </pre>
+                  <p>Обращаться к элементам можно внутри структуры svg ведь defs и symbol не отображаются
+                  </p>
+                  <pre>
+                  <code>
+                  не скрываем svg что бы use не скрыть
+                  он же используется в этом же svg
+                    
+                &lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+                
+                  &lt;defs&gt;  
+                
+                    &lt;symbol viewBox="0 0 21 22" id="<span style="color: tomato;">src-1</span>"&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                    &lt;/symbol&gt;
+                
+                    &lt;symbol viewBox="0 0 21 18" id="<span style="color: blue;">src-2</span>"&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                    &lt;/symbol&gt;
+                
+                    &lt;symbol viewBox="0 0 21 22" id="<span style="color: rgb(214, 188, 45);">src-3</span>"&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                      &lt;path d="..." fill="#000000" /&gt;
+                    &lt;/symbol&gt;
+                
+                  &lt;/defs&gt;
+                
+                
+                  &lt;use xlink:href="#<span style="color: tomato;">src-1</span>"&gt;&lt;/use&gt;  
+                
+                  &lt;use xlink:href="#<span style="color: blue;">src-2</span>"&gt;&lt;/use&gt;
+                
+                  &lt;use xlink:href="#<span style="color: rgb(214, 188, 45);">src-3</span>"&gt;&lt;/use&gt;
+                
+                &lt;/svg&gt;
+                
+                  </code>
+                </pre>
 
-              <details class="show-piece">
-                <summary><code>спрайт в html</code></summary>
+                </details>
 
-                <pre>
-  <code>
-Вставляем спрайт на странице html и скрываем элемент svg потому 
-что, svg по дефолту занимает место 150x300
+                <details class="show-piece">
+                  <summary><code>спрайт в отдельном файле</code></summary>
+                  <p>Почти то же что и выше но сам svg помещается в отдельный файл <code>sprite.svg</code> и уже от туда
+                    вытаскиваются его части при помощи тега <code>use</code></p>
 
-                                        прячем спрайт
-&lt;svg xmlns="http://www.w3.org/2000/svg" <span style="color: tomato;">display="none"</span>&gt;
+                  <pre>
+                  <code>
+                в папку с картинками закидываем файл sprite.svg
+                img --|
+                      |-img.png
+                      |-img.png
+                      |-sprite.svg
+                
+                в файле html вытаскиваем части из файла sprite.svg
+                
+                &lt;svg&gt;
+                  &lt;use href="../img/sprite.svg#id<sup>тут идет id symbol</sup> "&gt;&lt;/use&gt;
+                &lt;/svg&gt;
+                
+                </code>
+                </pre>
 
-  &lt;defs&gt;  блок defs и symbol не отображаются
-
-    &lt;symbol viewBox="0 0 21 22" id="src-1"&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 21 18" id="<span style="color: tomato;">src-2</span>"&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 21 22" id="src-3"&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-    &lt;/symbol&gt;
-
-  &lt;/defs&gt;
-
-&lt;/svg&gt;
-
-В нутри спрайта расположены картинки в тегах symbol, у
-каждой свой id для обращения к конкретной отдельно.
-
-&lt;svg&gt;
-  &lt;use xlink:href="#<span style="color: tomato;">svg-2</span>"&gt;&lt;/use&gt;
-&lt;/svg&gt;
-  </code>
-</pre>
-                <p>Обращаться к элементам можно внутри структуры svg ведь defs и symbol не отображаются
-                </p>
-                <pre>
-  <code>
-  не скрываем svg что бы use не скрыть
-  он же используется в этом же svg
-    
-&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
-
-  &lt;defs&gt;  
-
-    &lt;symbol viewBox="0 0 21 22" id="<span style="color: tomato;">src-1</span>"&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 21 18" id="<span style="color: blue;">src-2</span>"&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 21 22" id="<span style="color: rgb(214, 188, 45);">src-3</span>"&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-      &lt;path d="..." fill="#000000" /&gt;
-    &lt;/symbol&gt;
-
-  &lt;/defs&gt;
+                </details>
 
 
-  &lt;use xlink:href="#<span style="color: tomato;">src-1</span>"&gt;&lt;/use&gt;  
+              </li>
+              <li class="layout__content-item">
 
-  &lt;use xlink:href="#<span style="color: blue;">src-2</span>"&gt;&lt;/use&gt;
-
-  &lt;use xlink:href="#<span style="color: rgb(214, 188, 45);">src-3</span>"&gt;&lt;/use&gt;
-
-&lt;/svg&gt;
-
-  </code>
-</pre>
-
-              </details>
-
-              <details class="show-piece">
-                <summary><code>спрайт в отдельном файле</code></summary>
-                <p>Почти то же что и выше но сам svg помещается в отдельный файл <code>sprite.svg</code> и уже от туда
-                  вытаскиваются его части при помощи тега <code>use</code></p>
-
-                <pre>
-  <code>
-в папку с картинками закидываем файл sprite.svg
-img --|
-      |-img.png
-      |-img.png
-      |-sprite.svg
-
-в файле html вытаскиваем части из файла sprite.svg
-
-&lt;svg&gt;
-  &lt;use href="../img/sprite.svg#id<sup>тут идет id symbol</sup> "&gt;&lt;/use&gt;
-&lt;/svg&gt;
-
-</code>
-</pre>
-
-              </details>
-
-            </section>
-
-            <section class="cdata">
-
-              <details class="show-block ">
-                <summary><code>&lt;![CDATA[ ...]]&gt;</code></summary>
+                <h2>&lt;![CDATA[ ...]]&gt;</h2>
                 <p>Есть два способа изменить стили — во встроенном SVG и через внешнее подключение (например, в списке
                   стилей). Чтобы
                   встроить стили, оберните их в тег &lsaquo;style&rsaquo;
@@ -316,13 +342,11 @@ img --|
             &lsaquo;/svg&rsaquo;
               </code>
             </pre>
-              </details>
-            </section>
 
-            <section class="viewport-vievBox">
 
-              <details class="show-block ">
-                <summary><code>viewport и vievBox</code></summary>
+              </li>
+              <li class="layout__content-item">
+                <h2>viewport и vievBox</h2>
                 <div class="svgBoxOne">
                   <img src="img/svgAnimOne.jpg" alt="">
                 </div>
@@ -345,12 +369,9 @@ img --|
                   <img src="img/svgAnimFour.jpg" alt="">
                 </div>
 
-              </details>
-            </section>
-
-            <section class="preserveAspectRatio">
-              <details class="show-block ">
-                <summary><code>preserveAspectRatio</code></summary>
+              </li>
+              <li class="layout__content-item">
+                <h2>preserveAspectRatio</h2>
                 <pre>
   <code>
             
@@ -387,13 +408,8 @@ img --|
                   <img src="img/meet.png" alt="">
                   <figcaption>meet: показать весь svg в вьюпорте.</figcaption>
                 </figure>
-
-              </details>
-            </section>
-
-            <section class="animation">
-              <details class="show-block ">
-                <summary><code>animation</code></summary>
+              </li>
+              <li class="layout__content-item">
                 <h2>анимация path</h2>
                 <p>Получить длину path можно с помощью метода <code>path.getTotalLength();</code></p>
 
@@ -496,14 +512,9 @@ svg.home .bottom {
                   <line pathlength="1" class="dor-2" x1="9.5" y1="17" x2="9.5" y2="18" />
 
                 </svg>
-
-              </details>
-            </section>
-
-            <section class="smil-animation">
-              <details class="show-block ">
-                <summary><code>smil-animation</code></summary>
-                <h3>svg smil animate</h3>
+              </li>
+              <li class="layout__content-item">
+                <h2>svg smil animate</h2>
                 <p>Смил анимация пишется внутри svg, она анимирует атрибуты svg при помощи тега animate</p>
                 <p>Атрибут animate указывается внутри path</p>
                 <p>Изменяем одну и ту же фигуру(делаем разную форму), не изменяя количество точек, после этого ставим их
@@ -609,14 +620,9 @@ svg.home .bottom {
                 <p><a href="https://www.youtube.com/watch?v=meD4fFX9jKQ&t=3s" target="_blank"
                     rel="noopener noreferrer">Ссылка на
                     анимацию выше</a></p>
-
-              </details>
-            </section>
-
-            <section class="mask-image">
-              <details class="show-block ">
-                <summary><code>mask-image</code></summary>
-                <p>mask-image:</p>
+              </li>
+              <li class="layout__content-item">
+                <h2>mask-image:</h2>
 
                 <ul>
                   <li>mask-clip</li>
@@ -685,14 +691,9 @@ svg.home .bottom {
                     <img class="mask-image-4" src="img/3.png" alt="">
                   </li>
                 </ul>
-              </details>
-
-            </section>
-
-            <section class="figures">
-
-              <details class="show-block ">
-                <summary><code>figures</code></summary>
+              </li>
+              <li class="layout__content-item">
+                <h2>figures</h2>
                 <hgroup>
                   <h3>rect</h3>
                   <h4>Для создания прямоугольника и различных его вариаций используется элемент &lt;rect&gt;:</h4>
@@ -889,13 +890,9 @@ svg.home .bottom {
 &lt;/svg&gt;
   </code>
 </pre>
-              </details>
-            </section>
-
-            <section class="fill-rule">
-
-              <details class="show-block ">
-                <summary><code>fill-rule</code></summary>
+              </li>
+              <li class="layout__content-item">
+                <h2>fill-rule</h2>
                 <p>Свойство определяет как будут заливаться сложные фигуры, имеющие пересечения внутри себя. Для простых
                   фигур
                   ни на что не влияет.</p>
@@ -950,14 +947,9 @@ svg.home .bottom {
                     <use href="#circle-evenodd" x="50" />
                   </svg>
                 </figure>
-              </details>
-            </section>
-
-
-            <section class="filter-drop-shadow">
-
-              <details class="show-block ">
-                <summary><code>filter-drop-shadow</code></summary>
+              </li>
+              <li class="layout__content-item">
+                <h2>filter-drop-shadow</h2>
                 <h3>даже у тени есть своя тень</h3>
                 <p>Тень в filter: drop-shadow() падает от всех не прозрачных частей, даже от background у png и даже от
                   border.</p>
@@ -992,15 +984,9 @@ svg.home .bottom {
                   <div></div>
 
                 </div>
-
-              </details>
-            </section>
-
-
-            <section class="svg-media">
-
-              <details class="show-block ">
-                <summary><code>Svg поддерживает медиавыражения</code></summary>
+              </li>
+              <li class="layout__content-item">
+                <h2>Svg поддерживает медиавыражения</h2>
                 <p>Действительно крутая штука в SVG состоит в том, что если использовать медиавыражения в стилях,
                   вставленных
                   внутри файла,
@@ -1010,10 +996,13 @@ svg.home .bottom {
                   значит, что у них уже есть своя реализация медиавыражений к элементам. Как чудесно. Это позволяет нам
                   контролировать,
                   как SVG будет выглядеть в любом отображаемом размере.</p>
-              </details>
-            </section>
+              </li>
+
+            </ul>
+
 
           </section>
+
 
         </div>
       </section>
@@ -1023,7 +1012,6 @@ svg.home .bottom {
     @@include('html/footer.html', {})
 
   </div> <!-- wrapper -->
-  <script src="js/modules/svg.js"></script>
   <script src="js/app.min.js"></script>
 </body>
 

@@ -67,6 +67,51 @@
 
 
 
+.layout {
+
+  &__tab-list {
+    display: inline-block;
+    font-size: 1em;
+
+    position: sticky;
+    top: 10px;
+  }
+
+  &__content-list {
+    display: inline-block;
+    margin-left: 150px;
+  }
+
+
+  &__tab-list li {
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+  }
+
+
+  &__content-item {
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+
+
+  .is-active {
+    display: block;
+  }
+
+  &__tab-list li.is-active {
+    color: silver;
+  }
+
+
+}
+
+
+
+
+
 
 
 .export-import__box {
