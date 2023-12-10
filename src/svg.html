@@ -20,12 +20,6 @@
           <section class="svg layout">
 
 
-
-
-
-
-
-
             <ol class="layout__tab-list list-reset">
 
               <li class="layout__tab-item is-active">начальная</li>
@@ -98,7 +92,7 @@
                   до начальной.</p>
 
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item how-to-insert">
                 <h2>Как вставить?</h2>
 
                 <p>Если хочется выжать максимум из SVG, используйте object. В качестве альтернативы подходит встроенный
@@ -193,7 +187,7 @@
 </pre>
                 </details>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item sprite">
 
                 <h2>sprite</h2>
                 <p>Проблема инлайнового svg в том что браузер не может его кэшировать. Если имеется
@@ -308,7 +302,7 @@
 
 
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item cdata">
 
                 <h2>&lt;![CDATA[ ...]]&gt;</h2>
                 <p>Есть два способа изменить стили — во встроенном SVG и через внешнее подключение (например, в списке
@@ -345,7 +339,7 @@
 
 
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item viewport-vievBox">
                 <h2>viewport и vievBox</h2>
                 <div class="svgBoxOne">
                   <img src="img/svgAnimOne.jpg" alt="">
@@ -370,7 +364,7 @@
                 </div>
 
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item preserveAspectRatio">
                 <h2>preserveAspectRatio</h2>
                 <pre>
   <code>
@@ -409,7 +403,7 @@
                   <figcaption>meet: показать весь svg в вьюпорте.</figcaption>
                 </figure>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item animation">
                 <h2>анимация path</h2>
                 <p>Получить длину path можно с помощью метода <code>path.getTotalLength();</code></p>
 
@@ -513,8 +507,8 @@ svg.home .bottom {
 
                 </svg>
               </li>
-              <li class="layout__content-item">
-                <h2>svg smil animate</h2>
+              <li class="layout__content-item smil-animation">
+                <h2>smil-animation</h2>
                 <p>Смил анимация пишется внутри svg, она анимирует атрибуты svg при помощи тега animate</p>
                 <p>Атрибут animate указывается внутри path</p>
                 <p>Изменяем одну и ту же фигуру(делаем разную форму), не изменяя количество точек, после этого ставим их
@@ -621,7 +615,7 @@ svg.home .bottom {
                     rel="noopener noreferrer">Ссылка на
                     анимацию выше</a></p>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item mask-image">
                 <h2>mask-image:</h2>
 
                 <ul>
@@ -692,7 +686,7 @@ svg.home .bottom {
                   </li>
                 </ul>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item figures">
                 <h2>figures</h2>
                 <hgroup>
                   <h3>rect</h3>
@@ -891,7 +885,7 @@ svg.home .bottom {
   </code>
 </pre>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item fill-rule">
                 <h2>fill-rule</h2>
                 <p>Свойство определяет как будут заливаться сложные фигуры, имеющие пересечения внутри себя. Для простых
                   фигур
@@ -948,7 +942,8 @@ svg.home .bottom {
                   </svg>
                 </figure>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item drop-shadow">
+          
                 <h2>filter-drop-shadow</h2>
                 <h3>даже у тени есть своя тень</h3>
                 <p>Тень в filter: drop-shadow() падает от всех не прозрачных частей, даже от background у png и даже от
@@ -985,7 +980,7 @@ svg.home .bottom {
 
                 </div>
               </li>
-              <li class="layout__content-item">
+              <li class="layout__content-item svg-media">
                 <h2>Svg поддерживает медиавыражения</h2>
                 <p>Действительно крутая штука в SVG состоит в том, что если использовать медиавыражения в стилях,
                   вставленных

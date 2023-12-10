@@ -38,8 +38,6 @@
 }
 
 
-
-
 .main-menu {
   width: 100%;
   padding: 1em 0;
@@ -63,8 +61,6 @@
     padding: .5em 1em;
   }
 }
-
-
 
 
 .layout {
@@ -109,19 +105,10 @@
 }
 
 
-
-
-
-
-
 .export-import__box {
   display: flex;
   justify-content: space-between;
 }
-
-
-
-
 
 
 .content-switcher-example {
@@ -188,14 +175,7 @@
 
 
 
-
-
-
-
-
-
-
-section.svg {
+.svg {
 
   .svgBoxOne {
     width: 350px;
@@ -365,7 +345,7 @@ svg.circle-evenodd {
 
 
 
-.filter-drop-shadow {
+.drop-shadow {
 
   & .drop-shadow__inner {
     display: flex;
