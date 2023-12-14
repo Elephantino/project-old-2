@@ -1344,13 +1344,10 @@ name: 'Игорь',      // свойство : значение
                     <ul>
                       <li>свойства это пары ключ: значение</li>
                       <li>свойства объекта неявно имеют строковый тип</li>
-                      <li>свойства это характеристики объекта</li>
-                      <li>свойства подобны переменным, но в составе объекта</li>
                     </ul>
                     <h3>методы</h3>
                     <ul>
-                      <li>Методы – это поведение объекта, его функции</li>
-                      <li>Методы – это свойства, у которых значение является функцией</li>
+                      <li>Методы – это свойства, у которых значение является функцией (поведение объекта)</li>
                     </ul>
                   </div>
 
@@ -1828,64 +1825,149 @@ alert( 1 && 2 && 3 ); // 3
               <section class="js__cycles">
                 <h2 class="title">циклы</h2>
 
+                <p><b>for of --- snring, array, nodelist, map, set и т.д.</b></p>
+                <p><b>for of --- object</b></p>
+                <p><b>for --- свойства / значения</b></p>
+                <p>for...in обход перечисляемых свойств объекта осуществляется в произвольном порядке.</p>
+                <p>for...of обход происходит в соответствии с тем, какой порядок определён в итерируемом объекте</p>
+
+                <p>for и for in вам нужно использовать конструкцию arr [index]:</p>
+                <p>forEach() и for of, вы сразу получаете доступ к самому элементу массива. С forEach() вы можете так же
+                  получить
+                  индекс массива, с for of индекс не доступен.</p>
+                <p>проходит объект в произвольном порядке(порядок сверху в низ не горантирован)</p>
+
+
+
 
                 <div class="performance">
                   <h2>for</h2>
                   <p>пройти n раз свойства или значения</p>
-                  <p>i внутри for не индекс, это просто счетчик который совпадает с индексами на каждой итерации начиная
-                    с
-                    <code>let i = 0;</code>
-                  </p>
+
                   <pre>
  <code>
-for (let i = 0; i &lt; arr.length; i++) {
-  console.log(i); //ключи
-  console.log(arr[i]); //значения
-}
+for (let i = 0; i &lt; arr.length; i++) {             let i = 0;
+  console.log(i); //ключи                i никакого отношения к индексам не имеет
+  console.log(arr[i]); //значения         это обычная переменная котрая изменяется 
+}                                             каждую итерацию i++
  </code>
 </pre>
+
+
+
+
+                  <p>перебрать что то в обратном порядке:</p>
+                  <pre><code>
+for (let i = items.length - 1; i > = 0; i -= 1) { ... }
+
+</code></pre>
                 </div>
 
 
 
                 <div class="performance">
-                  <h2>for-in</h2>
-                  <p>перебор всех свойств или значений // только obj</p>
-                  <pre>
- <code>
- for (let key in obj) {
-  console.log(key); //свойства
-  console.log(obj[key]); //значения
- }
- </code>
-</pre>
+
+                  <h2>for in -- для перебора свойств объекта</h2>
+                  <p>for...in -- пройти в цикле по перечисляемым свойствам объекта и свойствам из прототипа.</p>
+                  <p>Перечисляемые свойства – это свойства, которые разработчик добавляет объекту.</p>
+                  <p>Встроенные свойства, например length у массива, не обходятся в цикле если им не указан метод. Для
+                    изменения
+                    значений дескрипторов применяется статический метод Object.defineProperty()</p>
+
+                  <pre><code>
+const person = {
+  name: "Igor",
+  age: 28,                            в цикле for in 
+  city: "Bratsk",                     на место <span class="color-red">i</span>
+  hobby: "programmer",                подставляется ключ/свойство
+};                                    каждую итерацию цикла
+
+
+for (let <span class="color-red">i</span> <span class="color-light-blue">in</span> person) {
+  console.log(<span class="color-red">i</span> + "-" + person[<span class="color-red">i</span>])    person[<span class="color-red">i</span>]
+}                                 
+      name - Igor                     person.name
+      age - 28                        person.age
+      city - Bratsk                   person.city
+      hobby - programmer              person.hobby  
+                                                                               
+</code></pre>
+
+
+
+
+                  <h3 class="color-red">for in не стоит использовать для перебора массива:</h3>
+                  <p>Нет гарантии, что for...in будет возвращать индексы в конкретном порядке. </p>
+                  <p>Числовые свойства будут перечисляться в отсортированном порядке по возрастанию</p>
+
+
+                  <pre><code>
+let arr = [ "a", "b", "c", "d" ];    
+                                        <span class="color-red">не перебирайте массивы с for in</span>
+for (let <span class="color-red">i</span> <span class="color-light-blue">in</span> arr) {      
+  console.log(<span class="color-red">i</span> + " - " + arr[<span class="color-red">i</span>]);      
+};                                            
+          <span class="color-red">i</span>     arr[<span class="color-red">i</span>]
+     // ключ - значение
+           0 - a
+           1 - b
+           2 - c
+           3 - d
+
+</code></pre>
+
+
                 </div>
 
                 <div class="performance">
-                  <h2>for-of</h2>
-                  <p>перебор всех значений // только значений</p>
+
+                  <h2>for of -- обход итерируемых объектов</h2>
+
+                  <p><b>snring, array, nodelist, map, set и т.д.</b></p>
+                  <p>почти то же что и forEach.</p>
+                  <p>в отличие от forEach(), он работает с break, continue и return.</p>
+
+                  <p>в отличии от for in порядок перебора объекта гарантирован</p>
                   <pre>
- <code>
- for (let i of arr) {
-  console.log(i) //значения
- }
-    
- for of работает сразу со значениями:
-    
- iter - строка/массив/объект/и т.д.
+  <code>
+let arr = [ "a", "b", "c", "d" ];        for of работает сразу со значениями
+                                             к индексам доступа нет
+for (let i <span class="color-red">of</span> arr) { -- i значение массива arr
+  console.log(i)                                                          
+};                                                        
+      // значения 
+            a
+            b
+            c 
+            d
+  </code>
+</pre>
 
- let iter = [ 2, 4, 9, "9" ];
+                  <h4>перебор object</h4>
+                  <pre><code>
+по дефолту не удобно перебирать object с for of
+потому что object не итерируемый по умолчанию
 
- for (let i of iter) {
-  i += 1; ----- for of может изменять значения прям на ходу потому
-  console.log(i);           что работает сразу со значениями
- }
- // 3
- // 5
- // 10
- // "91" —- string (произошел concat)
+const person = {             
+  name: "Igor",                 
+  age: 28, 
+  city: "Bratsk", 
+  hobby: "programmer", 
+};
+
+              массив ключей объекта                        массив значений объекта
+for (let i <span class="color-red">of</span> <span class="color-light-blue">Object.<span class="color-red">keys</span>(person)</span>) {   |     for (let i <span class="color-red">of</span> <span class="color-light-blue">Object.<span class="color-red">values</span>(person)</span>) {
+  console.log(i);                      |       console.log(i);
+}                                      |     }  
+        // name                        |          // Igor
+           age                         |             28
+           city                        |             Bratsk
+           hobby                       |             programmer
+
  </code>
 </pre>
+
+
                 </div>
 
               </section>

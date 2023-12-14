@@ -2,6 +2,20 @@
 @import "reset";
 
 
+:root {
+  --color-light-blue: #289dcc;
+  --color-red: rgb(185, 63, 63);
+}
+
+
+.color-light-blue {
+  color: var(--color-light-blue);
+}
+
+.color-red {
+  color: var(--color-red);
+}
+
 
 h1,
 h2,
