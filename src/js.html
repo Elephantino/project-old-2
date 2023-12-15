@@ -1057,6 +1057,11 @@ console.log(arr[count]) // "2"
                     свойства</p>
                   <p>По этому если вы знаете что интересующее вас свойство называется color, то пишите сразу value.color
                   </p>
+
+
+
+
+
                   <h3>replacement</h3>
                   <pre>
    <code>
@@ -1166,6 +1171,73 @@ a[0][1]; // 15
 
 
                   </details>
+
+                  <div class="performance">
+                    <h3>перебор массива</h3>
+
+                    <h3>for</h3>
+                    <pre><code>
+let arr = [ "a", "b", "c", "d" ];
+
+for (let <span class="color-red">i</span> = 0; i < arr.length; i++) {                
+  console.log(i + " - " + arr[i]);             в цикле for переменная <span class="color-red">i</span> - никак к ключу не 
+};                                                относится это просто переменная которая 
+          i      arr[i]                              изменяется каждую итерацию цикла,
+      // ключ - значение                                в других циклах <span class="color-red">i</span> это ключ/свойство
+            0 - a
+            1 - b
+            2 - c
+            3 - d
+
+</code></pre>
+
+                    <h3>for in</h3>
+                    <p class="color-red">for in не стоит использовать для перебора массива</p>
+                    <pre><code>
+let arr = [ "a", "b", "c", "d" ];
+
+for (let <span class="color-red">i</span> <span class="color-light-blue">in</span> arr) {  
+  console.log(i + " - " + arr[i]);     на место <span class="color-red">i</span> подставляется ключ/свойство 
+};                                           каждую итерацию цикла
+          i     arr[i]
+     // ключ - значение
+           0 - a
+           1 - b
+           2 - c
+           3 - d
+
+</code></pre>
+
+                    <h3>for of</h3>
+
+                    <pre><code>
+let arr = [ "a", "b", "c", "d" ];
+
+for (let i <span class="color-red">of</span> arr) { 
+  console.log(i)                                    на место <span class="color-red">i</span> подставляется ключ/свойство                      
+};                                                        каждую итерацию цикла
+      // значения 
+            a
+            b
+            c 
+            d
+
+
+
+
+
+</code></pre>
+
+                    <pre><code>
+arr.forEach((e) => console.log(e));  // a b c d
+
+arr.map((e) => console.log(e))  // a b c d // новый массив
+
+</code></pre>
+
+
+
+                  </div>
 
                   <div class="performance">
 
@@ -1324,6 +1396,12 @@ arr.slice(3); // 3,4,5
 
                 <details class="show-piece object">
                   <summary>object</summary>
+
+                  <div class="performance">
+                    <p>рассматривать только свойства самого объекта, а не его прототипов
+                      getOwnPropertyNames(), hasOwnProperty(), propertyIsEnumerable.</p>
+                  </div>
+
                   <p>Объекты для хранения именованных коллекций</p>
                   <p>Объекты – это ссылочный тип, когда вы присваиваете объект переменной, вы присваиваете ей не сам
                     этот
@@ -1451,6 +1529,76 @@ delete person.age;
 
                   <div class="performance">
                     <h3>перебор объекта</h3>
+
+
+
+                    <h3>for</h3>
+
+                    <pre><code>
+const person = {        
+  name: "Igor",                   Object.keys(obj) свойства
+  age: 28,                        Object.values(obj) значения
+  city: "Bratsk",                 Object.entries(obj) весь объект
+  hobby: "programmer", 
+};
+
+for (let <span class="color-red">i</span> = 0; i < <span class="color-light-blue">Object.keys(person)</span>.length; i++) {
+  console.log(<span class="color-light-blue">Object.keys(person)</span>[<span class="color-red">i</span>] + " - " + <span class="color-light-blue">Object.values(person)</span>[<span class="color-red">i</span>]);
+}    
+     name - Igor
+     age - 28
+     city - Bratsk
+     hobby - programmer
+
+</code></pre>
+
+                    <h3>for in</h3>
+
+                    <pre><code>
+const person = {
+  name: "Igor",
+  age: 28,                            в цикле for in 
+  city: "Bratsk",                     на место <span class="color-red">i</span>
+  hobby: "programmer",                подставляется ключ/свойство
+};                                    каждую итерацию цикла
+
+
+for (let <span class="color-red">i</span> <span class="color-light-blue">in</span> person) {
+  console.log(<span class="color-red">i</span> + "-" + person[<span class="color-red">i</span>])    person[<span class="color-red">i</span>]
+}                                 
+      name - Igor                     person.name
+      age - 28                        person.age
+      city - Bratsk                   person.city
+      hobby - programmer              person.hobby 
+
+</code></pre>
+
+                    <h3>for of</h3>
+
+                    <pre><code>
+по дефолту не удобно перебирать object с for of
+потому что object не итерируемый по умолчанию
+
+const person = {             
+  name: "Igor",                 
+  age: 28, 
+  city: "Bratsk", 
+  hobby: "programmer", 
+};
+
+              массив ключей объекта                        массив значений объекта
+for (let i <span class="color-red">of</span> <span class="color-light-blue">Object.<span class="color-red">keys</span>(person)</span>) {   |     for (let i <span class="color-red">of</span> <span class="color-light-blue">Object.<span class="color-red">values</span>(person)</span>) {
+  console.log(i);                      |       console.log(i);
+}                                      |     }  
+        // name                        |          // Igor
+           age                         |             28
+           city                        |             Bratsk
+           hobby                       |             programmer
+
+</code></pre>
+
+                    <h3>forEach</h3>
+
                     <pre>
   <code>
 Object.keys(car).forEach((key) =&gt; {
