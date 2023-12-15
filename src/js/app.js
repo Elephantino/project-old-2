@@ -3,16 +3,7 @@ import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
 
-const person = {
-  name: "Igor",
-  age: 28, 
-  city: "Bratsk", 
-  hobby: "programmer", 
-};
 
-for (let i = 0; i < Object.keys(person).length; i++) {
-  console.log(Object.keys(person)[i] + " - "  + Object.values(person)[i]);
-} 
 
 
 
